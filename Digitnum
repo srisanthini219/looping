@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class DigitCount {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        String number = scanner.nextLine();
+        
+        System.out.print("Enter the digit to count: ");
+        char digit = scanner.nextLine().charAt(0);
+        
+        int count = 0;
+        for (char c : number.toCharArray()) {
+            if (c == digit) {
+                count++;
+            }
+        }
+        
+        System.out.println("Occurrence of " + digit + ": " + count);
+        scanner.close();
+    }
+}

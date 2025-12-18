@@ -1,0 +1,21 @@
+public class FightOddOrEven {
+    public static void main(String[] args) {
+        int number = 12345;
+        
+        int firstDigit = getFirstDigit(number);
+        
+        if (firstDigit % 2 == 0) {
+            System.out.println("First digit " + firstDigit + " is even");
+        } else {
+            System.out.println("First digit " + firstDigit + " is odd");
+        }
+    }
+    
+    static int getFirstDigit(int num) {
+        num = Math.abs(num);
+        while (num >= 10) {
+            num /= 10;
+        }
+        return num;
+    }
+}
